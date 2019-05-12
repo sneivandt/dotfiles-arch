@@ -5,4 +5,4 @@
 0 * * * * pacman -Syuw --noconfirm
 
 # Update locate database
-0 * * * * [[ -n $(command -v /usr/bin/updatedb) ]] && updatedb
+0 * * * * [[ -n $(command -vp /usr/bin/updatedb) ]] && updatedb
