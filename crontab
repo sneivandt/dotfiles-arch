@@ -1,3 +1,2 @@
 # Clean ~/tmp
 0 * * * * find ~/tmp -mtime +7 -delete
-
