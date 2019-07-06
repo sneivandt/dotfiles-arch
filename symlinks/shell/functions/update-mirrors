@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Update mirrorlist
-updatemirrors()
+update-mirrors()
 {
   sudo sh -c "curl -s 'https://www.archlinux.org/mirrorlist/?country=US&protocol=https&ip_version=4' | sed 's/^#Server/Server/' | rankmirrors -n 6 - > /etc/pacman.d/mirrorlist"
 }
