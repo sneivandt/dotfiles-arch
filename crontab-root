@@ -1,8 +1,0 @@
-# Update mirrorlist
-0 * * * * sh -c "curl -s 'https://www.archlinux.org/mirrorlist/?country=US&protocol=https&ip_version=4' | sed 's/^#Server/Server/' | rankmirrors -n 6 - > /etc/pacman.d/mirrorlist"
-
-# Download packages
-0 * * * * pacman -Syuw --noconfirm
-
-# Update locate database
-*/10 * * * * [[ -n $(command -vp /usr/bin/updatedb) ]] && updatedb
